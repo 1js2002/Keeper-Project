@@ -1,3 +1,5 @@
+
+
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { LightbulbOutlined as Lightbulb, ArchiveOutlined as Archive, DeleteOutlineOutlined as Delete } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
@@ -13,8 +15,8 @@ const NavList = () => {
     return (
         <List>
         {
-            navList.ma-p(list => (
-                <ListItem Button key={list.id}>
+            navList.map(list => (
+                <ListItem button key={list.id}>
                     <Link to={`${list.route}`} style={{ textDecoration: 'none', display: 'flex', color: 'inherit'}}>
                         <ListItemIcon style={{ alignItems: 'center'}}>
                             {list.icon}
